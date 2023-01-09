@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
+:root {
+  --bg-color: #101820;
+  --primary-text-color: #1a7a4c;
+  --secondary-text-color: #F1F1F1;
+  --gray-300: #d1d5db;
+  --toolbar-bg: #171717;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Merienda', cursive;
+  /* font-family: 'Finger Paint', cursive; */
+  background: var(--bg-color);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  padding: 40px 0;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  color: var(--primary-text-color);
+  text-decoration: underline;
+}
+
+main{
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+  margin: 0 2rem;
+  border: 2px solid var(--gray-300);
+  border-radius: 5px;
+}
+
+/*
+  Splash Container
+*/
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.start-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  color: var(--secondary-text-color);
+  padding: 30px 0;
+}
+
+.info {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  padding: 0 50px;
+  margin-bottom: 20px;
+}
+
+.info-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+}
+
+.error-avatar {
+  font-size: 0.875rem;
+  font-weight: 100;
+  color: red;
+}
+
+.splash-select {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.left-select {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 50px;
+  gap: 10px;
+}
+
+.right-select {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-right: 50px;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  border: 2px solid #00042e;
+  box-shadow: 2px 2px 15px #000000 inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 20%;
+}
+
+.card:hover  {
+  box-shadow: 2px 2px 15px #07ff07 inset;
+} 
+
+.card:active, .selectedAvatar {
+  box-shadow: 2px 2px 15px #00deff inset
+}
+
+.card-image {
+  pointer-events: none;
+}
+
+.btn-middle {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.btn-last {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: 40px;
+}
+
+.splashButton {
+  padding: 1.3em 3em;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  color: #000;
+  background-color: var(--secondary-text-color);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.splashButton:active {
+  transform: translateY(-1px);
+}
+
+.splashButton:hover {
+  background-color: #1e40af;
+  box-shadow: 0px 10px 20px 11px #175ec3b3;
+  color: var(--secondary-text-color);;
+  transform: translateY(-7px);
+}
+
+/*
+  Gameover Overlay
+*/
+
+.gameover-container {
+  display: none;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.gameover-text {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  color: var(--primary-text-color);
+  text-transform: uppercase;
+}
+
+.gameover-score {
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  color: var(--primary-text-color);
+  text-transform: uppercase;
+}
+
+/*
+  Toolbar 
+*/
+.toolbar {
+  display: none;
+  border-bottom: 1px solid var(--gray-300);
+  background: var(--toolbar-bg);
+}
+
+.left {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25%;
+  border-radius: 3px;
+  border-right: 1px solid var(--gray-300);
+}
+
+.right {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 25%;
+  border-radius: 3px;
+  border-left: 1px solid var(--gray-300);
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--secondary-text-color);
+  width: 50%;
+}
+
+.round-text {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+
+.turn-text {
+  font-size: 2rem;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+}
+
+.image-selected {
+  max-width: 100%;
+  width: 100px;
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+}
+
+.score-text {
+  font-size: 24px;
+  color: var(--primary-text-color)
+}
+
+/*
+  Main Game
+*/
+
+.game-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 50%;
+  height: 90%;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #334155;
+  box-shadow: 0px 0px 0px 1px;
+}
+
+.game-text {
+  color: var(--secondary-text-color);
+  font-size: 100px;
+  /* pointer-events: none; */
+}
+
+/*
+  Extras
+*/
+
+.blink-animation {
+  animation: blink 3s linear infinite;
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+.test {
+  background: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+* Unused css
+*/
+
+/* .fade-animation {
+  -webkit-animation: fadeinout 5s linear;
+  animation: fadeinout 5s linear;
+} */
+
+/* @-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+} */

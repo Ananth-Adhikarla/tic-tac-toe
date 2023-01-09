@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V2</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1> Tic-Tac-Toe</h1>
+  </header>
+  
+  <main>
+
+    <!-- Main Game -->
+    <section class="container">
+
+      <div class="splash-container" id="splashContainer">
+        <span class="start-title"> Choose Your Avatar </span>  
+        <div class="info">
+          <span class="info-title"> Player <span class="error-avatar" id="avatarErrorText"></span></span>
+          <span class="info-title"> AI </span>
+        </div>
+        <div class="splash-select">
+          <div class="left-select" id="leftSelect"></div>
+          <div class="right-select" id="rightSelect"></div>
+        </div>
+        <button class="splashButton btn-last" id="startGame">Start</button>
+      </div>
+
+      <div class="gameover-container" id="gameoverContainer">
+        <span class="gameover-text">GAME OVER</span>
+        <span class="gameover-score" id="gameoverScore"></span>
+        <button class="splashButton" id="restartGame">Play Again</button>
+      </div>
+
+      <div class="toolbar" id="toolbar">
+        <div class="left">
+          <div class="image">
+            <img class="image-selected" src="" alt="" id="leftImage" />
+          </div>
+          <div class="score">
+            <div class="score-text">Score: <span id="leftScore">0</span></div>
+          </div>
+        </div>
+        <div class="center">
+          <div class="round-text">Round: <span id="currentRound">1</span></div>
+          <span class="turn-text" id="currentTurn">Your Turn</span>
+        </div>
+        <div class="right">
+          <div class="image">
+            <img class="image-selected" src="" alt="" id="rightImage"/>
+          </div>
+          <div class="score">
+            <div class="score-text">Score: <span id="rightScore">0</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="game-container" id="gameContainer">
+        <div class="game-board">
+          <div class="grid game-text" data-index="0"></div>
+          <div class="grid game-text" data-index="1"></div>
+          <div class="grid game-text" data-index="2"></div>
+          <div class="grid game-text" data-index="3"></div>
+          <div class="grid game-text" data-index="4"></div>
+          <div class="grid game-text" data-index="5"></div>
+          <div class="grid game-text" data-index="6"></div>
+          <div class="grid game-text" data-index="7"></div>
+          <div class="grid game-text" data-index="8"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js" ></script>
+</body>
+</html>

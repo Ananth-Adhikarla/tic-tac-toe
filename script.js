@@ -167,7 +167,7 @@ const splashScreenMain = ( () => {
       let image = document.createElement('img');
       card.classList.add("card");
       card.id = `${side}card${i}`;
-      image.src = `/assets/icon${i+1}.png`;
+      image.src = `./assets/Icon${i+1}.png`;
       image.classList.add('card-image');
       card.addEventListener('click', selectAvatar, false);
       card.appendChild(image);

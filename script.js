@@ -475,17 +475,6 @@ const gameController = (() => {
     return isValid
   }
 
-  // const checkWinner_old = (fieldIndex, player) => {
-
-  //   return winConditions
-  //     .filter((combination) => combination.includes(fieldIndex))
-  //     .some((possibleCombination) =>
-  //       possibleCombination.every(
-  //         (index) => gameBoard.getMark(index) === player.getMark() 
-  //       )
-  //     );
-  // }
-
   const toolbarText = async (currentPlayer) => {
     displayController.setText(displayController.currentRoundText, round);
     displayController.setText(displayController.currentTurnText, currentPlayer.getTurnText());
